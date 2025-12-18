@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TimeLab")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e1a898887dcada8d7e357453a7684b235086a9d")]
 [assembly: System.Reflection.AssemblyProductAttribute("TimeLab")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TimeLab")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
