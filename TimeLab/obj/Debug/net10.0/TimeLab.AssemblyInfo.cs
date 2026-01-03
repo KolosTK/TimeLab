@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("f9174d4a-d77d-4b5c-9241-b023f9ef47cf")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("TimeLab")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e1a898887dcada8d7e357453a7684b235086a9d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+81fe7f0cd9f42935d8b100becdbeba32481577a6")]
 [assembly: System.Reflection.AssemblyProductAttribute("TimeLab")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TimeLab")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

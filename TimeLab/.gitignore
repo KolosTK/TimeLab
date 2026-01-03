@@ -1,0 +1,14 @@
+﻿# ===============================
+# User secrets / local config
+# ===============================
+appsettings.Development.json
+secrets.json
+secrets.env
+
+# ===============================
+# IDE files
+# ===============================
+.vs/
+.idea/
+*.user
+*.suo
