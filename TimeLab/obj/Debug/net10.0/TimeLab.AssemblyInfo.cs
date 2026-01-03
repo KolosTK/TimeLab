@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TimeLab")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+81fe7f0cd9f42935d8b100becdbeba32481577a6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91a3cbf73233740191a1d1688397aafd4fde3bde")]
 [assembly: System.Reflection.AssemblyProductAttribute("TimeLab")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TimeLab")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
