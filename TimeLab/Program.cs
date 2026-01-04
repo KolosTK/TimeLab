@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TimeLab.Data;
+using TimeLab.Entities;
 
 namespace TimeLab;
 
@@ -13,11 +15,23 @@ public class Program
             options.UseNpgsql(
                 builder.Configuration.GetConnectionString("DefaultConnection")));
 
+        
+        builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+            .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddDefaultTokenProviders();
+        
+        
+        builder.Services.AddAuthentication();
+        builder.Services.AddAuthorization();
+        
         // Add services to the container.
         builder.Services.AddRazorPages();
-
+        
+        
         var app = builder.Build();
 
+        app.MapIdentityApi<IdentityUser>();
+        
         // Configure the HTTP request pipeline.
         if (!app.Environment.IsDevelopment())
         {
@@ -31,6 +45,7 @@ public class Program
         app.UseRouting();
 
         app.UseAuthorization();
+        app.UseAuthentication();
 
         app.MapStaticAssets();
         app.MapRazorPages()

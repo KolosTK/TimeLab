@@ -244,3 +244,4 @@ D:\Projects\TimeLab\TimeLab\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Wor
 D:\Projects\TimeLab\TimeLab\bin\Debug\net10.0\runtimes\win\lib\net9.0\System.Windows.Extensions.dll
 D:\Projects\TimeLab\TimeLab\obj\Debug\net10.0\TimeLab.csproj.AssemblyReference.cache
 D:\Projects\TimeLab\TimeLab\obj\Debug\net10.0\TimeLab.csproj.Up2Date
+D:\Projects\TimeLab\TimeLab\bin\Debug\net10.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
