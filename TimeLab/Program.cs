@@ -11,6 +11,7 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+
         builder.Services.AddDbContext<ApplicationDbContext>(options =>
             options.UseNpgsql(
                 builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -21,16 +22,16 @@ public class Program
             .AddDefaultTokenProviders();
         
         
-        builder.Services.AddAuthentication();
-        builder.Services.AddAuthorization();
-        
         // Add services to the container.
         builder.Services.AddRazorPages();
+        
+        builder.Services.AddAuthentication();
+        builder.Services.AddAuthorization();
         
         
         var app = builder.Build();
 
-        app.MapIdentityApi<IdentityUser>();
+        /*app.MapIdentityApi<IdentityUser>();*/
         
         // Configure the HTTP request pipeline.
         if (!app.Environment.IsDevelopment())
@@ -44,13 +45,56 @@ public class Program
 
         app.UseRouting();
 
-        app.UseAuthorization();
         app.UseAuthentication();
+        app.UseAuthorization();
 
         app.MapStaticAssets();
         app.MapRazorPages()
             .WithStaticAssets();
 
+
+        using (var scope = app.Services.CreateScope())
+        {
+            var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+
+            var task = SeedRolesAndUsers(roleManager, userManager);
+            task.GetAwaiter().GetResult();
+
+            
+        }
+
         app.Run();
+    }
+    private static async Task SeedRolesAndUsers(RoleManager<IdentityRole> roleManager, UserManager<ApplicationUser> userManager)
+    {
+        string[] roles = new[] { "User", "Moderator" };
+
+        foreach (var role in roles)
+        {
+            if (!await roleManager.RoleExistsAsync(role))
+            {
+                await roleManager.CreateAsync(new IdentityRole(role));
+            }
+        }
+        
+        
+        string modEmail = "moderator@example.com";
+        var moderator = await userManager.FindByEmailAsync(modEmail);
+        
+        if (moderator == null)
+        {
+            moderator = new ApplicationUser
+            {
+                UserName = modEmail,
+                Email = modEmail,
+            };
+
+            var result = await userManager.CreateAsync(moderator, "Moderator123!");
+            if (result.Succeeded)
+            {
+                await userManager.AddToRoleAsync(moderator, "Moderator");
+            }
+        }
     }
 }
