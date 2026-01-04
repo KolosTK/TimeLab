@@ -15,11 +15,15 @@ public class Program
         builder.Services.AddDbContext<ApplicationDbContext>(options =>
             options.UseNpgsql(
                 builder.Configuration.GetConnectionString("DefaultConnection")));
-
         
-        builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-            .AddEntityFrameworkStores<ApplicationDbContext>()
-            .AddDefaultTokenProviders();
+        builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
+                {
+                    options.SignIn.RequireConfirmedAccount = false;
+                }
+            )
+            .AddRoles<IdentityRole>()
+            .AddEntityFrameworkStores<ApplicationDbContext>();
+
         
         
         // Add services to the container.
@@ -30,8 +34,6 @@ public class Program
         
         
         var app = builder.Build();
-
-        /*app.MapIdentityApi<IdentityUser>();*/
         
         // Configure the HTTP request pipeline.
         if (!app.Environment.IsDevelopment())

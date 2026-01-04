@@ -15,16 +15,61 @@
 
     <ItemGroup>
       <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.1" />
+      <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="10.0.1" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.1" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.1">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.1" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.1">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
+      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="10.0.1" />
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Pages\Identity\Manage\ChangePassword.cshtml" />
+      <AdditionalFiles Include="Pages\Identity\Manage\DeletePersonalData.cshtml" />
+      <AdditionalFiles Include="Pages\Identity\Manage\Disable2fa.cshtml" />
+      <AdditionalFiles Include="Pages\Identity\Manage\DownloadPersonalData.cshtml" />
+      <AdditionalFiles Include="Pages\Identity\Manage\Email.cshtml" />
+      <AdditionalFiles Include="Pages\Identity\Manage\EnableAuthenticator.cshtml" />
+      <AdditionalFiles Include="Pages\Identity\Manage\ExternalLogins.cshtml" />
+      <AdditionalFiles Include="Pages\Identity\Manage\GenerateRecoveryCodes.cshtml" />
+      <AdditionalFiles Include="Pages\Identity\Manage\Index.cshtml" />
+      <AdditionalFiles Include="Pages\Identity\Manage\PersonalData.cshtml" />
+      <AdditionalFiles Include="Pages\Identity\Manage\ResetAuthenticator.cshtml" />
+      <AdditionalFiles Include="Pages\Identity\Manage\SetPassword.cshtml" />
+      <AdditionalFiles Include="Pages\Identity\Manage\ShowRecoveryCodes.cshtml" />
+      <AdditionalFiles Include="Pages\Identity\Manage\TwoFactorAuthentication.cshtml" />
+      <AdditionalFiles Include="Pages\Identity\Manage\_ManageNav.cshtml" />
+      <AdditionalFiles Include="Pages\Identity\Manage\_StatusMessage.cshtml" />
+      <AdditionalFiles Include="Pages\Identity\Manage\_ViewImports.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Pages\Identity\Pages\Account\Manage\ChangePassword.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Identity\Pages\Account\Manage\DeletePersonalData.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Identity\Pages\Account\Manage\Disable2fa.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Identity\Pages\Account\Manage\DownloadPersonalData.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Identity\Pages\Account\Manage\Email.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Identity\Pages\Account\Manage\EnableAuthenticator.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Identity\Pages\Account\Manage\ExternalLogins.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Identity\Pages\Account\Manage\GenerateRecoveryCodes.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Identity\Pages\Account\Manage\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Identity\Pages\Account\Manage\PersonalData.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Identity\Pages\Account\Manage\ResetAuthenticator.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Identity\Pages\Account\Manage\SetPassword.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Identity\Pages\Account\Manage\ShowRecoveryCodes.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Identity\Pages\Account\Manage\TwoFactorAuthentication.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Identity\Pages\Account\Manage\_Layout.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Identity\Pages\Account\Manage\_ManageNav.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Identity\Pages\Account\Manage\_StatusMessage.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Identity\Pages\Account\Manage\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Identity\Pages\_ViewImports.cshtml" />
     </ItemGroup>
 
 </Project>

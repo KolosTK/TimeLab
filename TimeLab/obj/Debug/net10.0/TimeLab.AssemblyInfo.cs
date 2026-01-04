@@ -10,11 +10,12 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("f9174d4a-d77d-4b5c-9241-b023f9ef47cf")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("TimeLab")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+328fc43a45c607d681f40c4e31ef837489ff34a0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4af3baa851cd8391c6567026675b607fc2ba035f")]
 [assembly: System.Reflection.AssemblyProductAttribute("TimeLab")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TimeLab")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
